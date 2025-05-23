@@ -1,0 +1,1 @@
+from app.routes.main_routes import main_bp
