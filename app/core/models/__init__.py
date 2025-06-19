@@ -1,0 +1,1 @@
+from app.core.models.pokemon_model import Pokemon

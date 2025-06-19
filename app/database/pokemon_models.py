@@ -10,3 +10,19 @@ class Pokemons(db.Model):
     name = db.Column(db.String(18),
     unique = True,
     nullable = False)
+
+    type1 = db.Column(db.String(10))
+
+    type2 = db.Column(db.String(10))
+
+    hp = db.Column(db.String(8))
+
+    attack = db.Column(db.String(10))
+
+    defense = db.Column(db.String(10))
+    
+    speed = db.Column(db.String(10))
+
+    special = db.Column(db.String(10))
+
+    moves = db.Column(db.String(200))
