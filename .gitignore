@@ -1,6 +1,8 @@
 env/
 instance/
 __pycache__/
+logs/
 *.log
 *.db
 *.pyc
+.env
