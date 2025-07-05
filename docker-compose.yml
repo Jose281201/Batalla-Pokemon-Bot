@@ -1,0 +1,29 @@
+services:
+  freddy-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - PYTHON_VERSION=3.12.0
+    container_name: jose-luis-bot
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    env_file: .env
+    environment:
+      - LOG_UID=1000
+      - LOG_GID=1000
+    volumes:
+      - ./logs:/app/logs:rw
+    networks:
+      - telegram-bots
+
+volumes:
+  logs:
+    driver: local
+
+networks:
+  telegram-bots:
+    name: telegram-bots
+    attachable: true
+    driver: bridge

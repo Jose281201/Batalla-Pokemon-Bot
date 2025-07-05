@@ -1,0 +1,1 @@
+from app.data.pokemon_constants import MOVIMIENTOS_REALES, PS_POKEMON, ESTADOS

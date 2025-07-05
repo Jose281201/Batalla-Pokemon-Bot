@@ -1,0 +1,1 @@
+from app.bot.utils.post_init import post_init

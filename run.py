@@ -1,6 +1,9 @@
-from app import create_app
+from app import main
+from app.applog import LoggerConfig
 
-app = create_app()
+LoggerConfig().setup_logging()
+
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    main()
+    
