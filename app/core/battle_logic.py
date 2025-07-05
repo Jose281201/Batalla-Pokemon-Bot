@@ -3,6 +3,9 @@ from app.core.pokemon import Pokemon
 from app.data import MOVIMIENTOS_REALES
 
 
+def calcular_danho(nivel, poder, atk, defensa, modificador):
+    return int(((((2 * nivel / 5 + 2) * poder * atk / defensa) / 50) + 2) * modificador)
+
 def movimientos_descripcion(poke: Pokemon, mult):
     descripciones = []
     for i, mov in enumerate(poke.movimientos):
